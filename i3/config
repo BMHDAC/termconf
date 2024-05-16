@@ -50,7 +50,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec kitty --start-as=fullscreen
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -235,11 +235,11 @@ bar {
     urgent_workspace   $base $base $surface1
     binding_mode       $base $base $surface1
   }
-    font pango:Cousine Nerd Font Propo 10
+    font pango:Cousine Nerd Font Propo 14
     status_command i3status
     i3bar_command i3bar --transparency
 }
 
 # default gaps
-default_border pixel 2
+default_border pixel 1
 
