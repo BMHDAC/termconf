@@ -23,6 +23,8 @@ font pango:Hack Nerd Font 14
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id systectl --user start docker-desktop&
 exec --no-startup-id ibus-daemon -rxRd &
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec --no-startup-id waypaper --restore &
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -222,6 +224,7 @@ client.background        $base
 
 
 bar {
+  swaybar_command waybar
   position top
   colors {
     background         $base
@@ -235,7 +238,6 @@ bar {
     binding_mode       $base $base $surface1
   }
     font pango:Hack Nerd Font 14
-    status_command i3status
 }
 
 default_border pixel 0
@@ -370,4 +372,13 @@ input type:keyboard {
         xkb_options caps:escape
 }
 
+
+input type:touchpad {
+    left_handed enabled
+    tap enabled
+    natural_scroll enabled
+    dwt enabled
+    accel_profile "flat" # disable mouse acceleration (enabled by default; to set it manually, use "adaptive" instead of "flat")
+    pointer_accel 0.5 # set mouse sensitivity (between -1 and 1)
+}
 
