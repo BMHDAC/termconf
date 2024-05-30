@@ -4,6 +4,7 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -21,7 +22,9 @@ set $term alacritty
 set $menu dmenu_path | wmenu | xargs swaymsg exec -- "rofi -show drun"
 
 
+input * xkb_layout custom
 input type:keyboard {
+        xkb_layout custom
         xkb_options caps:escape
 }
 
@@ -223,18 +226,6 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-
-    colors {
-        background         $base
-        statusline         $text
-        focused_statusline $text
-        focused_separator  $base
-        focused_workspace  $base $base $green
-        active_workspace   $base $base $blue
-        inactive_workspace $base $base $surface1
-        urgent_workspace   $base $base $surface1
-        binding_mode       $base $base $surface1
-    }
 }
 
 
@@ -370,5 +361,4 @@ mode "$mode_gaps_left" {
 include /etc/sway/config.d/*
 exec --no-startup-id ibus-daemon -rxRd &
 exec --no-startup-id waypaper --restore&
-exec --no-startup-idflameshot &
-exec --no-startup-idnm-applet &
+exec --no-startup-id nm-applet &

@@ -1,0 +1,4 @@
+xkb_symbols "basic" {
+    include "us"
+    key <ESC>  { [quoteleft, asciitilde ]};
+};

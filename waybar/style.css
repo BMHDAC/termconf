@@ -47,10 +47,10 @@
 
 /* The whole bar */
 #waybar {
-  background: @base;
+  background-color: @surface;
   color: @text;
-  font-family: Noto Sans;
-  font-size: 13px;
+  font-family: UbuntuMono Nerd Font;
+  font-size: 16;
 }
 
 /* Each module */
