@@ -9,16 +9,13 @@
     // -------------------------------------------------------------------------
     // Global configuration
     // -------------------------------------------------------------------------
-    "layer": "top",
-    "position": "top",
+    "layer": "bottom",
+    "position": "bottom",
     // If height property would be not present, it'd be calculated dynamically
-    "height": 30,
+    "height": 20,
     "modules-left": [
         "sway/workspaces",
         "sway/mode"
-    ],
-    "modules-center": [
-        "sway/window"
     ],
     "modules-right": [
         "network",
