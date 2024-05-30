@@ -13,7 +13,7 @@ xkb_symbols "basic" {
     key <AE09> {[bracketright,9]};
     key <AE10> {[exclam,0]};
     key <AE11> {[apostrophe,quotedbl]};
-    key <AE12> {[bar, underscore]};
+    key <AE12> {[dollar, underscore]};
     key <AD11> {[slash, question]};
     key <AD12> {[minus, dead_circumflex]};
     # key <BKSL> {[,]};
