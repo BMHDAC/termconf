@@ -99,27 +99,27 @@ focus_follows_mouse no
 # Workspaces:
 #
     # Switch to workspace
-    bindsym $mod+comma workspace number 1
-    bindsym $mod+bracketleft workspace number 2
+    bindsym $mod+exclam workspace number 1
+    bindsym $mod+dollar workspace number 2
     bindsym $mod+braceleft workspace number 3
-    bindsym $mod+parenleft workspace number 4
+    bindsym $mod+braceright workspace number 4
     bindsym $mod+equal workspace number 5
     bindsym $mod+plus workspace number 6
-    bindsym $mod+parenright workspace number 7
-    bindsym $mod+braceright workspace number 8
-    bindsym $mod+bracketright workspace number 9
-    bindsym $mod+exclam workspace number 10
+    bindsym $mod+asciicircum workspace number 7
+    bindsym $mod+asterisk workspace number 8
+    bindsym $mod+parenleft workspace number 9
+    bindsym $mod+parenright workspace number 10
     # Move focused container to workspace
-    bindsym $mod+Shift+comma move container to workspace number 1
-    bindsym $mod+Shift+bracketleft move container to workspace number 2
+    bindsym $mod+Shift+exclam move container to workspace number 1
+    bindsym $mod+Shift+dollar move container to workspace number 2
     bindsym $mod+Shift+braceleft move container to workspace number 3
-    bindsym $mod+Shift+parenleft move container to workspace number 4
+    bindsym $mod+Shift+braceright move container to workspace number 4
     bindsym $mod+Shift+equal move container to workspace number 5
     bindsym $mod+Shift+plus move container to workspace number 6
-    bindsym $mod+Shift+parenright move container to workspace number 7
-    bindsym $mod+Shift+braceright move container to workspace number 8
-    bindsym $mod+Shift+bracketright move container to workspace number 9
-    bindsym $mod+Shift+exclam move container to workspace number 10
+    bindsym $mod+Shift+asciicircum move container to workspace number 7
+    bindsym $mod+Shift+asterisk move container to workspace number 8
+    bindsym $mod+Shift+parenleft move container to workspace number 9
+    bindsym $mod+Shift+parenright move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 #

@@ -2,23 +2,23 @@ partial alphanumeric_keys
 xkb_symbols "basic" {
     include "us"
     key <ESC>  { [quoteleft, asciitilde ]};
-    key <AE01> {[dollar,1]} ;
-    key <AE02> {[bracketleft,2]} ;
+    key <AE01> {[exclam,1]} ;
+    key <AE02> {[dollar,2]} ;
     key <AE03> {[braceleft,3]};
-    key <AE04> {[parenleft,4]};
+    key <AE04> {[braceright,4]};
     key <AE05> {[equal,5]};
     key <AE06> {[plus,6]};
-    key <AE07> {[parenright,7]};
-    key <AE08> {[braceright,8]};
-    key <AE09> {[bracketright,9]};
-    key <AE10> {[exclam,0]};
-    key <AE11> {[apostrophe,quotedbl]};
-    key <AE12> {[asterisk, underscore]};
-    key <AD11> {[slash, question]};
-    key <AD12> {[minus, asciicircum]};
+    key <AE07> {[asciicircum,7]};
+    key <AE08> {[asterisk,8]};
+    key <AE09> {[parenleft,9]};
+    key <AE10> {[parenright,0]};
+    key <AE11> {[bracketleft,underscore]};
+    key <AE12> {[bracketright,numbersign ]};
+    key <AD11> {[apostrophe,quotedbl]};
+    key <AD12> {[minus, at]};
     # key <BKSL> {[,]};
     key <AC11> {[percent,ampersand]};
     key <AB08> {[comma,less]};
     key <AB09> {[period,greater]};
-    key <AB10> {[numbersign,at]};
+    key <AB10> {[slash, question]};
 };
