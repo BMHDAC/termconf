@@ -29,7 +29,7 @@ exec --no-startup-id nitrogen --restore &
 exec --no-startup-id pasystray &
 exec --no-startup-id systectl --user start docker-desktop&
 exec --no-startup-id ibus-daemon -rxRd &
-exec xkbcomp -I$HOME/.config/xkb $HOME/.config/xkb/keymap.xkb $DISPLAY
+exec --no-startup-id xkbcomp -I$HOME/.config/xkb $HOME/.config/xkb/keymap.xkb $DISPLAY &
 
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
