@@ -37,10 +37,10 @@ xkb_symbols "you-suck" {
     key <AC07>	{[	 j,	 J		]};
     key <AC08>	{[	 k,	 K		]};
     key <AC09>	{[	 l,	 L		]};
-    key <AD11> {[apostrophe,quotedbl]};
-    key <AD12> {[minus, at]};
+    key <AD11> {[minus, ampersand]};
+    key <AD12> {[percent,at]};
 
-    key <AC11> {[percent,ampersand]};
+    key <AC11> {[apostrophe,quotedbl]};
 
     key <AB01>	{[	 z,	 Z		]};
     key <AB02>	{[	 x,	 X		]};
