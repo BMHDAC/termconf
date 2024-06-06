@@ -53,23 +53,27 @@ xkb_symbols "basic" {
     key <AB09>	{[  period,	 greater	]};
     key <AB10>	{[   slash,	 question	]};
 };
-partial alphanumeric_keys 
+default partial alphanumeric_keys modifier_keys
 xkb_symbols "you-suck" {
     include "us(basic)"
-    key <CAPS> { [Escape, Caps_Locks]};
+    key<CAPS> {
+        type[Group1] = "TWO_LEVEL",
+        symbols[Group1] = [ Escape, Caps_Lock ],
+        actions[Group1] = [ SetMods(mods = Escape), LockMods(mods = Lock) ]
+    };
     key <TLDE>	{[grave,	 asciitilde	]};
     key <ESC>  { [quoteleft, asciitilde ]};
     key <AE01> {[exclam,1]} ;
     key <AE02> {[dollar,2]} ;
     key <AE03> {[braceleft,3]};
     key <AE04> {[braceright,4]};
-    key <AE05> {[equal,5]};
+    key <AE05> {[percent,5]};
     key <AE06> {[asciicircum,6]};
     key <AE07> {[plus,7]};
     key <AE08> {[asterisk,8]};
     key <AE09> {[parenleft,9]};
     key <AE10> {[parenright,0]};
-    key <AE11> {[bracketleft,underscore]};
+    key <AE11> {[bracketleft,at]};
     key <AE12> {[bracketright,numbersign ]};
 
     key <AD01>	{[	 q,	 Q		]};
@@ -92,10 +96,11 @@ xkb_symbols "you-suck" {
     key <AC07>	{[	 j,	 J		]};
     key <AC08>	{[	 k,	 K		]};
     key <AC09>	{[	 l,	 L		]};
-    key <AD11> {[minus, ampersand]};
-    key <AD12> {[percent,at]};
+    key <AD11> {[apostrophe,quotedbl]};
+    key <AD12> {[minus, underscore]};
 
-    key <AC11> {[apostrophe,quotedbl]};
+    key <AC11> {[equal,ampersand]};
+
 
     key <AB01>	{[	 z,	 Z		]};
     key <AB02>	{[	 x,	 X		]};
