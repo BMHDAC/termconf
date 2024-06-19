@@ -3,8 +3,6 @@
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
-export PATH
-. "$HOME/.cargo/env"
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
@@ -88,25 +86,22 @@ ZSH_THEME=""
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker docker-compose zsh-autosuggestions zsh-syntax-highlighting npm virtualenv)
+plugins=(git docker docker-compose zsh-autosuggestions zsh-syntax-highlighting npm virtualenv vi-mode)
 
 source $ZSH/oh-my-zsh.sh
-
-bindkey -v
-bindkey '^e' autosuggest-accept
 eval "$(starship init zsh)"
 
-
+bindkey '^e' autosuggest-accept
 alias vim="nvim"
-alias vi="nvim"
-alias asdf="tmux new -At dev"
+alias asdf="~/termconf/tmuxscript.sh"
 alias ird="nitrogen --set-auto --random ~/.wallpaper/"
 alias tm="tmux"
 alias tmf="tmuxifier"
 export ADW_DISABLE_PORTAL=1
 export STARSHIP_CONFIG="$HOME/termconf/starship.toml"
 export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:/usr/local/android-studio/bin
+export EDITOR=nvim
+export PATH=$PATH:"/usr/local/android-studio/bin"
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
@@ -114,9 +109,6 @@ export PATH="$HOME/.tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # User configuration
 
