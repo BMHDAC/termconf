@@ -1,2 +1,4 @@
 #! /bin/sh
-tmux new -At $(basename $(pwd))
+target=$(basename $(pwd))
+tmux new -d -At $target
+tmux switch-client -t $target
