@@ -58,7 +58,6 @@ xkb_symbols "basic" {
 };
 default partial alphanumeric_keys modifier_keys
 xkb_symbols "you-suck" {
-    include "us(basic)"
     key<CAPS> {
         type[Group1] = "TWO_LEVEL",
         symbols[Group1] = [ Escape],
