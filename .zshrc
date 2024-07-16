@@ -24,7 +24,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME=""
+ZSH_THEME="dracula"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -89,7 +89,7 @@ ZSH_THEME=""
 plugins=(git docker docker-compose zsh-autosuggestions zsh-syntax-highlighting npm virtualenv vi-mode)
 
 source $ZSH/oh-my-zsh.sh
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 bindkey '^e' autosuggest-accept
 alias vim="nvim"
@@ -137,3 +137,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

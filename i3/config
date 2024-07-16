@@ -231,11 +231,11 @@ bar {
   }
     status_command i3status
 }
-default_border pixel 0
-default_floating_border pixel 0
+default_border pixel 3
+default_floating_border pixel 3
 # default gaps
-gaps inner 2
-gaps outer -2
+gaps inner 4
+gaps outer 8
 
 # gaps
 set $mode_gaps Gaps: (o)uter, (i)nner, (h)orizontal, (v)ertical, (t)op, (r)ight, (b)ottom, (l)eft
