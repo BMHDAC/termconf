@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Use fzf to find a directory in $HOME/Projects with a maximum depth of 3
-DIR=$(fd -d 3 -t d --hidden --exclude=.git --exclude=node_modules --exclude=.cache . "$HOME" | fzf)
+DIR=$(find "$HOME" -maxdepth 4 -type d -print 2>/dev/null | fzf)
 
 # If no directory was selected, exit
 if [ -z "$DIR" ]; then
