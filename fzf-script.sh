@@ -1,8 +1,8 @@
 #!/bin/zsh
 
 if [ -n "$TMUX" ]; then
-  tmux popup -d -E zsh -c $HOME/termconf/tmuxscript.sh
+  tmux popup -E $HOME/termconf/tmuxscript.sh 
 else 
-  ./tmuxscript.sh
+  $HOME/termconf/tmuxscript.sh
 fi
 
