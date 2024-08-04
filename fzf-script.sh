@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if [ -n "$TMUX" ]; then
   tmux popup -E $HOME/termconf/tmuxscript.sh 
 else 
-  echo "You are not inside tmux"
+  $HOME/termconf/tmuxscript.sh
 fi
 

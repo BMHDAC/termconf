@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env bash
 
 # Use fzf to find a directory in $HOME/Projects with a maximum depth of 3
 DIR=$(find "$HOME" -maxdepth 4 -type d -print 2>/dev/null | fzf)

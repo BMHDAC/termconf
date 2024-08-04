@@ -24,7 +24,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="dracula"
+ZSH_THEME=""
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -89,14 +89,19 @@ ZSH_THEME="dracula"
 plugins=(git docker docker-compose zsh-autosuggestions zsh-syntax-highlighting npm virtualenv vi-mode)
 
 source $ZSH/oh-my-zsh.sh
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 
-bindkey '^e' autosuggest-accept
+function find-session() {
+    source $HOME/termconf/fzf-script.sh
+}
+bindkey '^y' autosuggest-accept
+zle -N find-session
 alias vim="nvim"
 alias asdf="~/termconf/tmuxscript.sh"
 alias ird="nitrogen --set-auto --random ~/.wallpaper/"
 alias tm="tmux"
 alias tmf="tmuxifier"
+export FZF_DEFAULT_OPTS='--color=fg:#ebfafa,bg:#282a36,hl:#37f499 --color=fg+:#ebfafa,bg+:#212337,hl+:#37f499 --color=info:#f7c67f,prompt:#04d1f9,pointer:#7081d0 --color=marker:#7081d0,spinner:#f7c67f,header:#323449'
 export ADW_DISABLE_PORTAL=1
 export STARSHIP_CONFIG="$HOME/termconf/starship.toml"
 export ANDROID_HOME=$HOME/Android/Sdk
@@ -106,6 +111,7 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH="$HOME/.tmuxifier/bin:$PATH"
+export PATH=$PATH:$HOME/.local/bin/go/bin
 eval "$(tmuxifier init -)"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
@@ -141,3 +147,5 @@ export SDKMAN_DIR="$HOME/.sdkman"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH=$PATH:/home/dacbui308/.spicetify
